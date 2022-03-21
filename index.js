@@ -12,13 +12,14 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.render('landing')
+  //res.render('landing')
+  res.redirect(`/${uuidV4()}`)
 })
 
-app.get('dashboard', (req, res) => {
-  res.redirect(`dashboard/${uuidV4()}`)
+// app.get('dashboard', (req, res) => {
+//   res.redirect(`dashboard/${uuidV4()}`)
   
-})
+// })
 
 
 app.get('/:room', (req, res) => {
