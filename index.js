@@ -3,8 +3,10 @@ const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 const { v4: uuidV4 } = require('uuid')
+const path = require('path')
 
 app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
 app.use(express.static('public'))
 
 app.get('/login', (req, res) => {
